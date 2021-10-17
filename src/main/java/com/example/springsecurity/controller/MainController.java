@@ -4,10 +4,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class LoginController {
-    @RequestMapping("/login")
-    public String login() {
-        System.out.println("执行登录操作");
+public class MainController {
+
+    @RequestMapping("toMain")
+    public String main(){
         return "redirect:main.html";
+    }
+
+    @RequestMapping("toLogin")
+    public String login(){
+        return "redirect:login.html";
     }
 }
